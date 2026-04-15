@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battery Health Check Laptop Tool | Fix My Tech Tools</title>
+  <meta name="description" content="Use this battery health check laptop tool to estimate battery health from design capacity and full charge capacity, then understand whether your battery is good, moderate, or needs replacement.">
+  <link rel="canonical" href="https://www.fixmytechtools.com/battery.html">
+  <meta property="og:title" content="Battery Health Check Laptop Tool">
+  <meta property="og:description" content="Calculate laptop battery health percentage using design capacity and full charge capacity from your Windows battery report.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fixmytechtools.com/battery.html">
+  <meta property="og:site_name" content="Fix My Tech Tools">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I find my laptop battery capacity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Windows, run a battery report and look for design capacity and full charge capacity under the installed batteries section."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good laptop battery health percentage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A battery health percentage of 90% or above is usually considered good for everyday use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I replace my battery below 70% health?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Below 70%, replacement is recommended if you notice poor runtime, sudden shutdowns, or slow charging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this tool fix my battery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. This tool estimates battery health. It helps you decide whether troubleshooting, calibration, or replacement may be needed."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FT</span>
+        <span>Fix My Tech Tools</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="battery.html">Battery</a>
+        <a class="nav-link" href="slow-laptop.html">Slow Laptop</a>
+        <a class="nav-link" href="wifi-disconnecting.html">Wi-Fi</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">&gt;</span>
+        <span>Battery Health Check Laptop</span>
+      </nav>
+
+      <p class="eyebrow">Laptop battery tool</p>
+      <h1>Battery Health Check Laptop</h1>
+      <p>
+        Estimate your laptop battery health with values from your Windows battery report. This tool keeps the math simple and explains whether the result looks healthy, worn, or ready for replacement.
+      </p>
+    </section>
+
+    <section class="calculator" aria-labelledby="calculator-title">
+      <div class="calculator-copy">
+        <h2 id="calculator-title">Calculate battery health</h2>
+        <p>
+          Enter both values in mWh. The result compares your current full charge capacity with the battery's original design capacity.
+        </p>
+      </div>
+
+      <form id="battery-form" class="battery-form" novalidate>
+        <div class="form-field">
+          <label for="design-capacity">Design Capacity (mWh)</label>
+          <input id="design-capacity" name="designCapacity" type="number" min="1" step="1" inputmode="numeric" placeholder="Example: 50000">
+        </div>
+
+        <div class="form-field">
+          <label for="full-charge-capacity">Full Charge Capacity (mWh)</label>
+          <input id="full-charge-capacity" name="fullChargeCapacity" type="number" min="1" step="1" inputmode="numeric" placeholder="Example: 42500">
+        </div>
+
+        <button class="primary-button" type="submit">Calculate Battery Health</button>
+      </form>
+
+      <div id="battery-result" class="result" aria-live="polite">
+        <p class="result-placeholder">Your battery health result will appear here.</p>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Windows battery report</p>
+        <h2>How to find these values in Windows</h2>
+      </div>
+
+      <ol class="step-list">
+        <li>
+          <strong>Open Command Prompt.</strong>
+          Search for Command Prompt from the Start menu.
+        </li>
+        <li>
+          <strong>Run <code>powercfg /batteryreport</code>.</strong>
+          Press Enter and Windows will create a battery report file.
+        </li>
+        <li>
+          <strong>Open the battery report.</strong>
+          Copy the file path shown in Command Prompt and open it in your browser.
+        </li>
+        <li>
+          <strong>Find Design Capacity and Full Charge Capacity.</strong>
+          Look under the installed batteries section and enter those mWh values above.
+        </li>
+      </ol>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Result guide</p>
+        <h2>What your result means</h2>
+      </div>
+
+      <div class="status-grid">
+        <article class="status-card">
+          <h3>Good</h3>
+          <p>90% or above. Your battery is holding most of its original capacity and should still perform well.</p>
+        </article>
+
+        <article class="status-card">
+          <h3>Moderate</h3>
+          <p>70% to 89%. The battery has noticeable wear, but it may still be fine for normal daily use.</p>
+        </article>
+
+        <article class="status-card">
+          <h3>Replace battery</h3>
+          <p>Below 70%. Consider replacement if runtime is short, charging feels unreliable, or the laptop shuts down unexpectedly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <h2>Battery health basics</h2>
+      <p>
+        Battery health compares the full charge capacity your laptop can currently hold against the original design capacity.
+        A lower percentage usually means the battery has worn down through charge cycles, heat, age, or heavy daily use.
+      </p>
+    </section>
+
+    <section class="section faq-section">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>How do I find my laptop battery capacity?</summary>
+        <p>
+          On Windows, run a battery report and look for design capacity and full charge capacity under the installed batteries section.
+        </p>
+      </details>
+
+      <details>
+        <summary>What is a good laptop battery health percentage?</summary>
+        <p>
+          A battery health percentage of 90% or above is usually considered good for everyday use.
+        </p>
+      </details>
+
+      <details>
+        <summary>Should I replace my battery below 70% health?</summary>
+        <p>
+          Below 70%, replacement is recommended if you notice poor runtime, sudden shutdowns, or slow charging.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can this tool fix my battery?</summary>
+        <p>
+          No. This tool estimates battery health. It helps you decide whether troubleshooting, calibration, or replacement may be needed.
+        </p>
+      </details>
+    </section>
+
+    <section class="section related-section">
+      <div class="section-heading">
+        <p class="eyebrow">Related tools</p>
+        <h2>More troubleshooting tools</h2>
+      </div>
+
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="slow-laptop.html">
+          <span class="tool-kicker">Available now</span>
+          <span class="tool-label">Slow Laptop Fix</span>
+          <span class="tool-description">Check startup, storage, and performance basics.</span>
+          <span class="tool-action">Open tool</span>
+        </a>
+
+        <a class="tool-card tool-card-featured" href="wifi-disconnecting.html">
+          <span class="tool-kicker">Available now</span>
+          <span class="tool-label">Wi-Fi Keeps Disconnecting</span>
+          <span class="tool-description">Find common reasons Wi-Fi drops or slows down.</span>
+          <span class="tool-action">Open tool</span>
+        </a>
+
+        <article class="tool-card tool-card-muted">
+          <span class="tool-kicker">Coming soon</span>
+          <h3 class="tool-label">Disk Cleanup Windows</h3>
+          <p class="tool-description">Plan a safe cleanup for files, cache, and storage space.</p>
+          <span class="tool-action inactive">Planned</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Fix My Tech Tools. Simple tech troubleshooting tools.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
