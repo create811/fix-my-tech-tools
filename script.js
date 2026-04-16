@@ -52,6 +52,7 @@
   initWifiTool();
   initDiskCleanupTool();
   initOverheatingTool();
+  initBatteryDrainingTool();
 
 function initBatteryCalculator() {
   const form = document.getElementById("battery-form");
@@ -490,6 +491,106 @@ function initOverheatingTool() {
     }
 
     formatDiagnosisResult(result, `Likely cause: ${cause}`, "Severity level", severity, actions);
+  });
+}
+
+function initBatteryDrainingTool() {
+  const form = document.getElementById("battery-draining-form");
+  const result = document.getElementById("battery-draining-result");
+
+  if (!form || !result) {
+    return;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const drainSpeed = getFieldValue("drain-speed");
+    const batteryHot = getFieldValue("battery-hot");
+    const backgroundApps = getFieldValue("background-apps");
+    const brightnessHigh = getFieldValue("brightness-high");
+    const batteryAge = getFieldValue("battery-age");
+    const heavyBatteryApps = getFieldValue("heavy-battery-apps");
+
+    if (!drainSpeed || !batteryHot || !backgroundApps || !brightnessHigh || !batteryAge || !heavyBatteryApps) {
+      showError(result, "Please answer every question before analyzing the battery issue.");
+      return;
+    }
+
+    let cause = "General power usage";
+    let severity = "Low";
+    let actions = [
+      "Lower screen brightness and use battery saver when unplugged.",
+      "Close apps and browser tabs you are not using.",
+      "Restart the laptop and test battery life again during normal use."
+    ];
+
+    if (drainSpeed === "1-2") {
+      cause = "Possible battery wear or heavy power usage";
+      severity = "High";
+      actions = [
+        "Check battery health with the Battery Health Check tool.",
+        "Close heavy apps and browser tabs before using battery power.",
+        "Lower screen brightness and turn on battery saver.",
+        "If the battery is older or health is low, consider replacement."
+      ];
+    } else if (batteryHot === "yes") {
+      cause = "Heat affecting battery life";
+      severity = "High";
+      actions = [
+        "Let the laptop cool and avoid heavy use while it is hot.",
+        "Use the laptop on a hard, flat surface with vents uncovered.",
+        "Open the Laptop Overheating Fix tool to check airflow and fan issues.",
+        "Avoid charging or gaming if the laptop is already very hot."
+      ];
+    } else if (heavyBatteryApps === "yes") {
+      cause = "Heavy workload on battery";
+      severity = "Medium";
+      actions = [
+        "Limit gaming, video editing, and other heavy apps while unplugged.",
+        "Use those apps while plugged in when possible.",
+        "Lower performance or graphics settings on battery.",
+        "Close background apps before starting demanding work."
+      ];
+    } else if (backgroundApps === "yes") {
+      cause = "Background app usage";
+      severity = "Medium";
+      actions = [
+        "Close apps you are not actively using.",
+        "Check Task Manager for apps using CPU, memory, or battery.",
+        "Disable unnecessary startup apps.",
+        "Restart and test battery life with fewer background apps."
+      ];
+    } else if (brightnessHigh === "yes") {
+      cause = "High screen power usage";
+      severity = "Medium";
+      actions = [
+        "Lower screen brightness to a comfortable level.",
+        "Turn on battery saver while unplugged.",
+        "Reduce keyboard backlight brightness if your laptop has it.",
+        "Shorten the screen sleep timeout in Windows settings."
+      ];
+    } else if (batteryAge === "yes") {
+      cause = "Battery degradation";
+      severity = "Medium";
+      actions = [
+        "Run a battery health check to compare full charge capacity with design capacity.",
+        "Watch for sudden shutdowns, fast drops, or unreliable charging.",
+        "Consider replacement if health is low or runtime no longer fits your needs.",
+        "Avoid heat, which can make older batteries degrade faster."
+      ];
+    } else if (drainSpeed === "faster-before") {
+      cause = "Recent app, setting, or battery health change";
+      severity = "Medium";
+      actions = [
+        "Restart the laptop and test again with normal apps.",
+        "Review recently installed apps or updates.",
+        "Check Task Manager for apps using unusual power.",
+        "Run Battery Health Check if the drop happened suddenly."
+      ];
+    }
+
+    formatDiagnosisResult(result, `Likely cause: ${cause}`, "Severity", severity, actions);
   });
 }
 })();
