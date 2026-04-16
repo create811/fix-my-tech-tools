@@ -33,9 +33,24 @@
     `;
   }
 
+  function formatDiskCleanupResult(result, priority, summary, urgency, actions) {
+    const listItems = actions.map(function (action) {
+      return `<li>${action}</li>`;
+    }).join("");
+
+    result.innerHTML = `
+      <p class="result-title">Likely cleanup priority: ${priority}</p>
+      <p><strong>Main issue summary:</strong> ${summary}</p>
+      <p><strong>Urgency level:</strong> <span class="${getPriorityClass(urgency)}">${urgency}</span></p>
+      <p class="result-note">Recommended next steps:</p>
+      <ol class="result-list">${listItems}</ol>
+    `;
+  }
+
   initBatteryCalculator();
   initSlowLaptopTool();
   initWifiTool();
+  initDiskCleanupTool();
 
 function initBatteryCalculator() {
   const form = document.getElementById("battery-form");
@@ -277,6 +292,104 @@ function initWifiTool() {
     }
 
     formatDiagnosisResult(result, `Likely issue: ${issue}`, "Urgency", urgency, actions);
+  });
+}
+
+function initDiskCleanupTool() {
+  const form = document.getElementById("disk-cleanup-form");
+  const result = document.getElementById("disk-cleanup-result");
+
+  if (!form || !result) {
+    return;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const mainIssue = getFieldValue("disk-main-issue");
+    const freeSpace = getFieldValue("free-space");
+    const largeFiles = getFieldValue("large-files");
+    const unusedApps = getFieldValue("unused-apps");
+    const mediaStorage = getFieldValue("media-storage");
+    const recycleEmptied = getFieldValue("recycle-emptied");
+
+    if (!mainIssue || !freeSpace || !largeFiles || !unusedApps || !mediaStorage || !recycleEmptied) {
+      showError(result, "Please answer every question before building your cleanup plan.");
+      return;
+    }
+
+    let priority = "Routine cleanup";
+    let summary = "Your storage does not look critical, but a careful cleanup can still keep Windows running smoothly.";
+    let urgency = "Low";
+    let actions = [
+      "Review Downloads and Desktop for files you recognize and no longer need.",
+      "Uninstall apps you know you no longer use.",
+      "Open Windows Storage settings and review suggestions before deleting anything."
+    ];
+
+    if (freeSpace === "under-5") {
+      priority = "Critically low disk space";
+      summary = "Your drive is very low on free space, which can make Windows updates, apps, and daily use less reliable.";
+      urgency = "High";
+      actions = [
+        "Empty Recycle Bin to recover space from files you already deleted.",
+        "Remove or move large files from Downloads and Desktop.",
+        "Uninstall unused apps you recognize.",
+        "Move large photos, videos, backups, or installers off the laptop."
+      ];
+    } else if (mainIssue === "slow-pc" && (freeSpace === "5-20" || freeSpace === "under-5")) {
+      priority = "Low storage affecting performance";
+      summary = "Low free space can make a slow PC feel worse because Windows needs room for updates, caches, and temporary files.";
+      urgency = freeSpace === "under-5" ? "High" : "Medium";
+      actions = [
+        "Free up space until the system drive has a comfortable buffer.",
+        "Remove old downloads and duplicate files first.",
+        "Uninstall apps you do not use.",
+        "If the laptop still feels slow after cleanup, check startup apps and overheating."
+      ];
+    } else if (largeFiles === "yes" || mainIssue === "downloads-big") {
+      priority = "Personal files taking up storage";
+      summary = "Downloads, Desktop files, installers, and other personal files are likely using a noticeable amount of space.";
+      urgency = freeSpace === "5-20" ? "Medium" : "Low";
+      actions = [
+        "Sort Downloads and Desktop by file size.",
+        "Delete files you recognize and no longer need.",
+        "Move large files you want to keep to external or cloud storage.",
+        "Empty Recycle Bin after confirming you do not need those files."
+      ];
+    } else if (unusedApps === "yes") {
+      priority = "Unnecessary programs using storage";
+      summary = "Apps you no longer use may be taking up space and adding background clutter.";
+      urgency = freeSpace === "5-20" ? "Medium" : "Low";
+      actions = [
+        "Open Installed apps in Windows settings.",
+        "Sort by size and review apps you recognize.",
+        "Uninstall old programs, games, or trial software you no longer need.",
+        "Restart after removing large apps and check free space again."
+      ];
+    } else if (mediaStorage === "yes") {
+      priority = "Media storage buildup";
+      summary = "Photos and videos can quietly become the largest storage category on a laptop.";
+      urgency = freeSpace === "5-20" ? "Medium" : "Low";
+      actions = [
+        "Move large videos, photo libraries, and backups to external or cloud storage.",
+        "Keep only current projects or frequently used files on the laptop.",
+        "Delete duplicate media files after confirming backups exist.",
+        "Empty Recycle Bin once you are sure the moved files are safe."
+      ];
+    } else if (recycleEmptied === "no" || recycleEmptied === "not-sure") {
+      priority = "Recycle Bin cleanup";
+      summary = "Deleted files may still be using storage because Recycle Bin has not been emptied recently.";
+      urgency = "Low";
+      actions = [
+        "Open Recycle Bin and review what is inside.",
+        "Restore anything you still need.",
+        "Empty Recycle Bin to reclaim storage.",
+        "Check free space again after emptying it."
+      ];
+    }
+
+    formatDiskCleanupResult(result, priority, summary, urgency, actions);
   });
 }
 })();

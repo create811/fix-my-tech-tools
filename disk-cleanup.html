@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disk Cleanup for Windows 11 | Free Cleanup Helper</title>
+  <meta name="description" content="Find out what to clean on your Windows 11 laptop and get simple steps to free up space safely.">
+  <link rel="canonical" href="https://www.fixmytechtools.com/disk-cleanup.html">
+  <meta property="og:title" content="Disk Cleanup for Windows 11 | Free Cleanup Helper">
+  <meta property="og:description" content="Find out what to clean on your Windows 11 laptop and get simple steps to free up space safely.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fixmytechtools.com/disk-cleanup.html">
+  <meta property="og:site_name" content="Fix My Tech Tools">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I clean disk space in Windows 11?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start by emptying Recycle Bin, deleting old downloads, uninstalling unused apps, moving large files, and using Windows Storage settings carefully."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Disk Cleanup safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basic cleanup steps are usually safe when you remove files you recognize, empty Recycle Bin, and use Windows Storage settings. Be careful with system files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What files should I avoid deleting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Avoid random folders in the Windows directory, system files you do not understand, and files you did not create or recognize."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can low disk space slow down my laptop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Very low free space can make updates, temporary files, app caches, and everyday Windows tasks slower or less reliable."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FT</span>
+        <span>Fix My Tech Tools</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="battery.html">Battery</a>
+        <a class="nav-link" href="slow-laptop.html">Slow Laptop</a>
+        <a class="nav-link" href="wifi-disconnecting.html">Wi-Fi</a>
+        <a class="nav-link" href="disk-cleanup.html">Cleanup</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">&gt;</span>
+        <span>Disk Cleanup Windows</span>
+      </nav>
+
+      <p class="eyebrow">Windows storage tool</p>
+      <h1>Disk Cleanup for Windows 11</h1>
+      <p>
+        This helper points you toward what is probably filling your PC storage and which safe cleanup steps to try first. It is built for quick decisions, not risky file hunting.
+      </p>
+    </section>
+
+    <section class="calculator" aria-labelledby="disk-tool-title">
+      <div class="calculator-copy">
+        <h2 id="disk-tool-title">Analyze disk cleanup needs</h2>
+        <p>
+          Answer a few questions about storage, files, apps, and Recycle Bin. The result will suggest a cleanup priority and practical next steps.
+        </p>
+      </div>
+
+      <form id="disk-cleanup-form" class="diagnosis-form" novalidate>
+        <div class="form-field">
+          <label for="disk-main-issue">Main issue</label>
+          <select id="disk-main-issue" name="mainIssue" required>
+            <option value="">Select issue</option>
+            <option value="low-space">Low disk space warning</option>
+            <option value="slow-pc">PC feels slow</option>
+            <option value="downloads-big">Downloads folder too big</option>
+            <option value="not-sure">Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="free-space">Drive free space</label>
+          <select id="free-space" name="freeSpace" required>
+            <option value="">Select free space</option>
+            <option value="under-5">Less than 5 GB</option>
+            <option value="5-20">5 to 20 GB</option>
+            <option value="over-20">More than 20 GB</option>
+            <option value="not-sure">Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="large-files">Do you have many large files in Downloads or Desktop?</label>
+          <select id="large-files" name="largeFiles" required>
+            <option value="">Select answer</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="not-sure">Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="unused-apps">Have you installed many apps you no longer use?</label>
+          <select id="unused-apps" name="unusedApps" required>
+            <option value="">Select answer</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="not-sure">Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="media-storage">Do you store lots of photos/videos on this laptop?</label>
+          <select id="media-storage" name="mediaStorage" required>
+            <option value="">Select answer</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="not-sure">Not sure</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="recycle-emptied">Have you emptied Recycle Bin recently?</label>
+          <select id="recycle-emptied" name="recycleEmptied" required>
+            <option value="">Select answer</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="not-sure">Not sure</option>
+          </select>
+        </div>
+
+        <button class="primary-button" type="submit">Analyze Disk Cleanup</button>
+      </form>
+
+      <div id="disk-cleanup-result" class="result" aria-live="polite">
+        <p class="result-placeholder">Your disk cleanup plan will appear here.</p>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Storage basics</p>
+        <h2>Common things taking up disk space on Windows</h2>
+      </div>
+      <p>
+        Downloads, Desktop files, Recycle Bin, old apps, temporary files, photos, and videos are some of the most common places where storage slowly disappears.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Safe first steps</p>
+        <h2>Safe cleanup steps to try first</h2>
+      </div>
+      <ol class="step-list">
+        <li><strong>Empty Recycle Bin.</strong> Deleted files still use space until the bin is emptied.</li>
+        <li><strong>Delete old downloads.</strong> Remove installers, duplicate files, and items you no longer need.</li>
+        <li><strong>Uninstall unused apps.</strong> Remove programs you recognize and no longer use.</li>
+        <li><strong>Move large files.</strong> Store photos, videos, and backups on external or cloud storage.</li>
+        <li><strong>Use Storage settings carefully.</strong> Review what Windows suggests before deleting anything.</li>
+      </ol>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Be careful</p>
+        <h2>What not to delete</h2>
+      </div>
+      <p>
+        Avoid system files unless you understand them, random folders inside the Windows directory, and files you did not create and do not recognize. When in doubt, leave it alone or make a backup first.
+      </p>
+    </section>
+
+    <section class="section text-section next-section">
+      <div class="section-heading">
+        <p class="eyebrow">What to do next</p>
+        <h2>If space keeps disappearing</h2>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <h3>Consider a larger SSD</h3>
+          <p>If storage is always low even after cleanup, a larger SSD may be the cleanest long-term fix.</p>
+        </article>
+        <article class="status-card">
+          <h3>Check performance causes</h3>
+          <p>If storage looks healthy but the laptop is still slow, check startup apps and heat next.</p>
+        </article>
+      </div>
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="slow-laptop.html">
+          <span class="tool-kicker">Available now</span>
+          <span class="tool-label">Slow Laptop Fix</span>
+          <span class="tool-description">Find common Windows performance bottlenecks.</span>
+          <span class="tool-action">Open tool</span>
+        </a>
+        <article class="tool-card tool-card-muted">
+          <span class="tool-kicker">Coming soon</span>
+          <h3 class="tool-label">Laptop Overheating Fix</h3>
+          <p class="tool-description">Check heat, fan, vent, and throttling basics.</p>
+          <span class="tool-action inactive">Planned</span>
+        </article>
+        <a class="tool-card tool-card-featured" href="battery.html">
+          <span class="tool-kicker">Available now</span>
+          <span class="tool-label">Battery Health Check Laptop</span>
+          <span class="tool-description">Estimate battery health from your Windows battery report.</span>
+          <span class="tool-action">Open tool</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <h2>FAQ</h2>
+      <details>
+        <summary>How do I clean disk space in Windows 11?</summary>
+        <p>Start by emptying Recycle Bin, deleting old downloads, uninstalling unused apps, moving large files, and using Windows Storage settings carefully.</p>
+      </details>
+      <details>
+        <summary>Is Disk Cleanup safe?</summary>
+        <p>Basic cleanup steps are usually safe when you remove files you recognize, empty Recycle Bin, and use Windows Storage settings. Be careful with system files.</p>
+      </details>
+      <details>
+        <summary>What files should I avoid deleting?</summary>
+        <p>Avoid random folders in the Windows directory, system files you do not understand, and files you did not create or recognize.</p>
+      </details>
+      <details>
+        <summary>Can low disk space slow down my laptop?</summary>
+        <p>Yes. Very low free space can make updates, temporary files, app caches, and everyday Windows tasks slower or less reliable.</p>
+      </details>
+    </section>
+
+    <section class="section related-section">
+      <div class="section-heading">
+        <p class="eyebrow">Related tools</p>
+        <h2>Keep troubleshooting</h2>
+      </div>
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="slow-laptop.html">
+          <span class="tool-kicker">Available now</span>
+          <span class="tool-label">Slow Laptop Fix</span>
+          <span class="tool-description">Diagnose poor Windows performance.</span>
+          <span class="tool-action">Open tool</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="wifi-disconnecting.html">
+          <span class="tool-kicker">Available now</span>
+          <span class="tool-label">Wi-Fi Keeps Disconnecting</span>
+          <span class="tool-description">Find common wireless disconnect causes.</span>
+          <span class="tool-action">Open tool</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="battery.html">
+          <span class="tool-kicker">Available now</span>
+          <span class="tool-label">Battery Health Check Laptop</span>
+          <span class="tool-description">Check whether battery wear is affecting daily use.</span>
+          <span class="tool-action">Open tool</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Fix My Tech Tools. Simple tech troubleshooting tools.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
