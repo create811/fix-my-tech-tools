@@ -51,6 +51,7 @@
   initSlowLaptopTool();
   initWifiTool();
   initDiskCleanupTool();
+  initOverheatingTool();
 
 function initBatteryCalculator() {
   const form = document.getElementById("battery-form");
@@ -390,6 +391,105 @@ function initDiskCleanupTool() {
     }
 
     formatDiskCleanupResult(result, priority, summary, urgency, actions);
+  });
+}
+
+function initOverheatingTool() {
+  const form = document.getElementById("overheating-form");
+  const result = document.getElementById("overheating-result");
+
+  if (!form || !result) {
+    return;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const symptom = getFieldValue("overheat-symptom");
+    const heatLocation = getFieldValue("heat-location");
+    const ventsBlocked = getFieldValue("vents-blocked");
+    const softSurface = getFieldValue("soft-surface");
+    const heavyApps = getFieldValue("heavy-apps");
+    const fanLouder = getFieldValue("fan-louder");
+
+    if (!symptom || !heatLocation || !ventsBlocked || !softSurface || !heavyApps || !fanLouder) {
+      showError(result, "Please answer every question before analyzing the overheating problem.");
+      return;
+    }
+
+    let cause = "General heat buildup";
+    let severity = "Low";
+    let actions = [
+      "Restart the laptop and close apps you are not using.",
+      "Use the laptop on a hard, flat surface with vents uncovered.",
+      "Watch whether heat returns during normal use."
+    ];
+
+    if (symptom === "shutdown") {
+      cause = "Serious overheating or thermal protection shutdown";
+      severity = "High";
+      actions = [
+        "Stop heavy use and let the laptop cool fully.",
+        "Move it to a hard, flat surface with clear airflow.",
+        "Check vents for dust or blockage before using demanding apps again.",
+        "Get repair help if shutdowns continue or the laptop becomes extremely hot."
+      ];
+    } else if (ventsBlocked === "yes") {
+      cause = "Airflow blockage";
+      severity = "High";
+      actions = [
+        "Power down the laptop and let it cool.",
+        "Gently clean visible dust around vents without pushing debris inside.",
+        "Keep vents clear during use.",
+        "Consider professional cleaning if fan noise or heat stays high."
+      ];
+    } else if (softSurface === "yes") {
+      cause = "Blocked airflow from soft surface use";
+      severity = "Medium";
+      actions = [
+        "Use the laptop on a desk, table, or laptop stand.",
+        "Avoid beds, sofas, blankets, and pillows while the laptop is running.",
+        "Retest temperature after 20 to 30 minutes on a flat surface."
+      ];
+    } else if (heavyApps === "yes") {
+      cause = "Workload heat";
+      severity = "Medium";
+      actions = [
+        "Close games, video editors, or other heavy apps you are not using.",
+        "Lower graphics or performance settings during demanding tasks.",
+        "Use the laptop plugged in on a flat surface with good airflow.",
+        "Take breaks if heat builds up quickly."
+      ];
+    } else if (fanLouder === "yes" || symptom === "fan-loud") {
+      cause = "Cooling strain or dust buildup";
+      severity = "Medium";
+      actions = [
+        "Check vents for dust and airflow blockage.",
+        "Close background apps that may be keeping the CPU busy.",
+        "Restart the laptop and listen for unusual fan noise.",
+        "Consider a repair check if the fan sounds rough or much louder than before."
+      ];
+    } else if (symptom === "slows-hot") {
+      cause = "Thermal throttling";
+      severity = "Medium";
+      actions = [
+        "Move to a hard, flat surface and let the laptop cool.",
+        "Close heavy apps and reduce browser tabs.",
+        "Check vents for dust or blocked airflow.",
+        "Use the Slow Laptop Fix tool if performance stays poor after cooling."
+      ];
+    } else if (heatLocation === "vents" || heatLocation === "bottom") {
+      cause = "Heat concentrated around cooling path";
+      severity = "Medium";
+      actions = [
+        "Keep the bottom and vents uncovered.",
+        "Use a stand or flat surface to improve airflow.",
+        "Clean visible vent dust gently.",
+        "Watch for shutdowns or sudden slowdowns."
+      ];
+    }
+
+    formatDiagnosisResult(result, `Likely cause: ${cause}`, "Severity level", severity, actions);
   });
 }
 })();
