@@ -142,8 +142,28 @@
         <h2>How to generate a battery report in Windows</h2>
       </div>
       <ol class="step-list">
-        <li><strong>Open Command Prompt.</strong> Search for Command Prompt from the Start menu. You can open it normally; administrator access is not usually required for this report.</li>
+        <li><strong>Open Command Prompt.</strong> Press Windows + R, type <code>cmd</code>, and press Enter. You can also search for Command Prompt from the Start menu. Administrator access is not usually required for this report.</li>
+      </ol>
+      <figure class="guide-image">
+        <img src="images/open-command-prompt-run-box.webp"
+             alt="Opening Command Prompt from the Windows Run dialog"
+             loading="lazy"
+             width="900"
+             height="500">
+        <figcaption>Open Command Prompt by pressing Windows + R, typing cmd, and pressing Enter.</figcaption>
+      </figure>
+      <ol class="step-list" start="2">
         <li><strong>Run <code>powercfg /batteryreport</code>.</strong> Press Enter and Windows will generate a battery report as an HTML file.</li>
+      </ol>
+      <figure class="guide-image">
+        <img src="images/powercfg-battery-report-command.webp"
+             alt="Running powercfg battery report command in Windows Command Prompt"
+             loading="lazy"
+             width="900"
+             height="500">
+        <figcaption>Run powercfg /batteryreport to create the Windows battery report file.</figcaption>
+      </figure>
+      <ol class="step-list" start="3">
         <li><strong>Look for the saved file path.</strong> Windows normally shows a message that the report was saved to a location like <code>C:\Users\YourName\battery-report.html</code>.</li>
         <li><strong>Open the report.</strong> Copy that path into File Explorer or paste it into your browser address bar to open the file.</li>
         <li><strong>Find the Installed batteries section.</strong> This is where you will see Design Capacity and Full Charge Capacity, which are the most important numbers for a quick health check.</li>
@@ -151,8 +171,6 @@
       <p>
         If Command Prompt shows a saved file path, copy it exactly. If you cannot find the report later, check your user folder first because that is where Windows usually stores it.
       </p>
-      <!-- INSERT CMD SCREENSHOT HERE -->
-      <!-- INSERT BATTERY REPORT SCREENSHOT HERE -->
     </section>
 
     <section class="section text-section">
@@ -162,6 +180,9 @@
       </div>
       <p>
         The report can look technical at first, but only a few sections matter for most people. If you know what these fields mean, you can usually tell whether the problem is simple battery wear or whether you should also check for heat, app usage, or charging issues.
+      </p>
+      <p>
+        If cycle count is the part that confuses you most, <a href="battery-cycle-count-explained.html">Battery Cycle Count Explained</a> breaks down what that number means and how to interpret it alongside health percentage.
       </p>
       <div class="status-grid">
         <article class="status-card">
@@ -239,6 +260,9 @@
       </ul>
       <p>
         If you are unsure whether your result is normal for the battery's age, this guide on <a href="how-long-should-a-laptop-battery-last.html">how long should a laptop battery last</a> gives more context on lifespan and typical wear.
+      </p>
+      <p>
+        If you want a symptom-based checklist before spending money, read the guide on <a href="signs-laptop-battery-needs-replacement.html">signs your laptop battery needs replacement</a>.
       </p>
     </section>
 
