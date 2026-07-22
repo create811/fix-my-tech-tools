@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wi-Fi Connected But No Internet? Safe Fixes That Actually Work</title>
+  <meta name="description" content="Learn why your Wi-Fi is connected but has no internet and follow safe troubleshooting steps first before resetting Windows or replacing hardware outright.">
+  <link rel="canonical" href="https://www.fixmytechtools.com/wifi-connected-but-no-internet.html">
+  <meta property="og:title" content="Wi-Fi Connected But No Internet? Safe Fixes That Actually Work">
+  <meta property="og:description" content="Learn why your Wi-Fi is connected but has no internet and follow safe troubleshooting steps first before resetting Windows or replacing hardware outright.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fixmytechtools.com/wifi-connected-but-no-internet.html">
+  <meta property="og:site_name" content="Fix My Tech Tools">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does Wi-Fi say connected but there is no internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That usually means your laptop is still talking to the router, but something between the router and the internet is failing. DNS issues, modem trouble, IP conflicts, router glitches, and ISP outages are common reasons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if the problem is my laptop or the router?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check whether other devices on the same Wi-Fi also lose internet. If every device has the same problem, focus on the router, modem, or ISP first. If only one laptop is affected, start with Windows network checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can DNS problems make Wi-Fi connected but no internet appear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. DNS problems are one of the most common reasons websites stop loading even though Wi-Fi still shows connected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I run Network Reset right away?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually no. Network Reset is useful later, but it removes saved network settings. It makes more sense after basic checks like rebooting the router, testing other devices, and checking DNS have already failed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is hardware more likely to be the cause?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hardware becomes more likely if Wi-Fi works only at certain angles, disappears completely, fails across many different networks, or keeps breaking after normal software troubleshooting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I call my ISP if Wi-Fi is connected but there is no internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if multiple devices are affected and the router or modem reboot does not help. At that point the issue is often outside the laptop."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FT</span>
+        <span>Fix My Tech Tools</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="battery.html">Battery</a>
+        <a class="nav-link" href="slow-laptop.html">Slow Laptop</a>
+        <a class="nav-link" href="wifi-disconnecting.html">Wi-Fi</a>
+        <a class="nav-link" href="disk-cleanup.html">Cleanup</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">&gt;</span>
+        <span>Wi-Fi Connected But No Internet</span>
+      </nav>
+
+      <p class="eyebrow">Wi-Fi troubleshooting guide</p>
+      <h1>Wi-Fi Connected But No Internet</h1>
+      <p>
+        This is one of the most misleading Windows network problems because the Wi-Fi icon looks fine even though nothing loads. In real support work, that usually means the laptop still sees the router, but the path from the router to the internet is broken somewhere.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Quick answer</p>
+        <h2>Start by checking whether the problem affects one device or everything</h2>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <h3>Quick answer</h3>
+          <p>If multiple devices on the same Wi-Fi have no internet, the router, modem, or ISP is the better place to look. If only one Windows laptop is affected, start with DNS, IP refresh, and adapter checks before using bigger reset options.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Common causes</p>
+        <h2>Common causes of connected Wi-Fi with no internet</h2>
+      </div>
+      <ul class="step-list quick-benefit-list">
+        <li>Router or modem lost internet access</li>
+        <li>DNS server issues</li>
+        <li>IP address conflicts or a bad DHCP lease</li>
+        <li>Temporary Windows adapter glitches after sleep or updates</li>
+        <li>Browser loading problems that look like network failure</li>
+      </ul>
+      <p>
+        One common real-world pattern is the laptop waking from sleep, showing Wi-Fi connected, and then quietly failing to load anything until the adapter is refreshed.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Troubleshooting flow</p>
+        <h2>Step-by-step troubleshooting that starts safe</h2>
+      </div>
+      <ol class="step-list">
+        <li><strong>Check another device on the same Wi-Fi.</strong> This tells you whether the problem is local or network-wide.</li>
+        <li><strong>Restart the router and modem if everything is affected.</strong></li>
+        <li><strong>Forget and reconnect to the Wi-Fi network if only one laptop is affected.</strong></li>
+        <li><strong>Refresh the connection.</strong> Toggle Wi-Fi off and back on, or restart the laptop cleanly.</li>
+        <li><strong>Check DNS next.</strong> If websites fail but the network still shows connected, use the <a href="dns-server-not-responding-windows.html">DNS Server Not Responding guide</a>.</li>
+      </ol>
+      <p>
+        If the real issue is that Wi-Fi drops on and off rather than staying connected with no internet, the <a href="windows-11-wifi-keeps-disconnecting.html">Windows 11 Wi-Fi Keeps Disconnecting guide</a> is the better match.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">When hardware may be involved</p>
+        <h2>When hardware becomes more likely</h2>
+      </div>
+      <p>
+        Hardware is more likely when Wi-Fi behaves badly on every network, the adapter disappears from Windows, or the laptop only stays online with the lid in certain positions. If the wireless adapter itself keeps failing, software fixes start helping less and less.
+      </p>
+    </section>
+
+    <section class="section text-section next-section">
+      <div class="section-heading">
+        <p class="eyebrow">Professional help</p>
+        <h2>When to stop troubleshooting on your own</h2>
+      </div>
+      <p>
+        Get outside help if the issue affects all devices and keeps coming back after router restarts, or if the laptop is the only device affected but the Wi-Fi adapter keeps disappearing, throwing driver errors, or failing across multiple networks. At that point you are either dealing with ISP trouble or a weakening adapter.
+      </p>
+    </section>
+
+    <section class="section related-section">
+      <div class="section-heading">
+        <p class="eyebrow">Related fixes</p>
+        <h2>Related Wi-Fi and network guides</h2>
+      </div>
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="dns-server-not-responding-windows.html">
+          <span class="tool-kicker">Helpful guide</span>
+          <span class="tool-label">DNS Server Not Responding</span>
+          <span class="tool-description">Use this when pages stop resolving even though the network still looks connected.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="windows-11-wifi-keeps-disconnecting.html">
+          <span class="tool-kicker">Helpful guide</span>
+          <span class="tool-label">Windows 11 Wi-Fi Keeps Disconnecting</span>
+          <span class="tool-description">Go here if the wireless link itself keeps dropping in and out.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="ethernet-connected-but-no-internet.html">
+          <span class="tool-kicker">Helpful guide</span>
+          <span class="tool-label">Ethernet Connected But No Internet</span>
+          <span class="tool-description">Compare wired behavior if you want to separate Wi-Fi issues from wider network trouble.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Why does Wi-Fi say connected but there is no internet?</summary>
+        <p>That usually means your laptop is still talking to the router, but something between the router and the internet is failing. DNS issues, modem trouble, IP conflicts, router glitches, and ISP outages are common reasons.</p>
+      </details>
+      <details>
+        <summary>How do I know if the problem is my laptop or the router?</summary>
+        <p>Check whether other devices on the same Wi-Fi also lose internet. If every device has the same problem, focus on the router, modem, or ISP first. If only one laptop is affected, start with Windows network checks.</p>
+      </details>
+      <details>
+        <summary>Can DNS problems make Wi-Fi connected but no internet appear?</summary>
+        <p>Yes. DNS problems are one of the most common reasons websites stop loading even though Wi-Fi still shows connected.</p>
+      </details>
+      <details>
+        <summary>Should I run Network Reset right away?</summary>
+        <p>Usually no. Network Reset is useful later, but it removes saved network settings. It makes more sense after basic checks like rebooting the router, testing other devices, and checking DNS have already failed.</p>
+      </details>
+      <details>
+        <summary>When is hardware more likely to be the cause?</summary>
+        <p>Hardware becomes more likely if Wi-Fi works only at certain angles, disappears completely, fails across many different networks, or keeps breaking after normal software troubleshooting.</p>
+      </details>
+      <details>
+        <summary>Should I call my ISP if Wi-Fi is connected but there is no internet?</summary>
+        <p>Yes, if multiple devices are affected and the router or modem reboot does not help. At that point the issue is often outside the laptop.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Fix My Tech Tools. Simple tech troubleshooting tools.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

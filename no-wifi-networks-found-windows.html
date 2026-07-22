@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Wi-Fi Networks Found in Windows? Step-by-Step Troubleshooting</title>
+  <meta name="description" content="Fix the No Wi-Fi networks found problem in Windows with safe checks for adapters, airplane mode, drivers, services, and common hardware warning signs.">
+  <link rel="canonical" href="https://www.fixmytechtools.com/no-wifi-networks-found-windows.html">
+  <meta property="og:title" content="No Wi-Fi Networks Found in Windows? Step-by-Step Troubleshooting">
+  <meta property="og:description" content="Fix the No Wi-Fi networks found problem in Windows with safe checks for adapters, airplane mode, drivers, services, and common hardware warning signs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fixmytechtools.com/no-wifi-networks-found-windows.html">
+  <meta property="og:site_name" content="Fix My Tech Tools">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does Windows say no Wi-Fi networks found?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That usually points to a disabled Wi-Fi adapter, airplane mode, driver trouble, a stopped wireless service, or a hardware problem that keeps Windows from seeing nearby networks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can airplane mode or a keyboard switch hide all Wi-Fi networks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Some laptops still use function keys or hardware toggles that disable wireless completely, which makes it look like no networks exist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I reinstall the Wi-Fi driver if no networks appear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the adapter is present but not working correctly, driver reinstall or rollback can help. If the adapter is missing entirely, look at Device Manager first before making bigger changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if the Wi-Fi card itself is failing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the adapter keeps disappearing, fails on multiple networks, or behaves the same after normal software troubleshooting, hardware becomes much more likely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a Windows update cause no Wi-Fi networks found?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Windows updates sometimes change wireless drivers or power settings in ways that leave the adapter disabled or unstable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I get professional help for missing Wi-Fi networks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Get help if the adapter vanishes repeatedly, Device Manager shows persistent errors, or the laptop still cannot see any networks after safe checks and driver troubleshooting."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FT</span>
+        <span>Fix My Tech Tools</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="battery.html">Battery</a>
+        <a class="nav-link" href="slow-laptop.html">Slow Laptop</a>
+        <a class="nav-link" href="wifi-disconnecting.html">Wi-Fi</a>
+        <a class="nav-link" href="disk-cleanup.html">Cleanup</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">&gt;</span>
+        <span>No Wi-Fi Networks Found in Windows</span>
+      </nav>
+
+      <p class="eyebrow">Wi-Fi troubleshooting guide</p>
+      <h1>No Wi-Fi Networks Found in Windows</h1>
+      <p>
+        When Windows suddenly says there are no Wi-Fi networks at all, the problem is usually lower-level than a weak signal. In real support cases, this often comes down to a disabled adapter, a driver issue, airplane mode, or a wireless card that is not behaving the way Windows expects.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Quick answer</p>
+        <h2>First make sure the Wi-Fi adapter is actually on and visible</h2>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <h3>Quick answer</h3>
+          <p>If no Wi-Fi networks appear at all, start by checking airplane mode, function-key wireless toggles, and whether the Wi-Fi adapter still appears in Windows. If the adapter is missing or erroring out, driver or hardware trouble becomes much more likely.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Common causes</p>
+        <h2>Common causes of missing Wi-Fi networks</h2>
+      </div>
+      <ul class="step-list quick-benefit-list">
+        <li>Airplane mode or a hardware wireless toggle</li>
+        <li>Disabled or crashed Wi-Fi adapter</li>
+        <li>Driver damage after updates or wake issues</li>
+        <li>Wireless services not starting properly</li>
+        <li>Failing Wi-Fi hardware</li>
+      </ul>
+      <p>
+        On some laptops, a keyboard shortcut can disable wireless so cleanly that Windows looks like it simply cannot see any networks.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Troubleshooting flow</p>
+        <h2>Step-by-step checks that come before deeper resets</h2>
+      </div>
+      <ol class="step-list">
+        <li><strong>Check airplane mode and wireless function keys.</strong></li>
+        <li><strong>Restart the laptop cleanly.</strong> This can bring back an adapter that got stuck after sleep or an update.</li>
+        <li><strong>Open Device Manager.</strong> Check whether the Wi-Fi adapter is present, disabled, or showing a warning icon.</li>
+        <li><strong>Check Windows Wi-Fi services.</strong> If the adapter is present but no networks show, services are worth checking before bigger steps.</li>
+        <li><strong>Update or roll back the Wi-Fi driver if the timing fits.</strong></li>
+      </ol>
+      <p>
+        If the laptop does see networks but keeps dropping them, go to the <a href="windows-11-wifi-keeps-disconnecting.html">Windows 11 Wi-Fi Keeps Disconnecting guide</a> instead.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">When hardware may be involved</p>
+        <h2>When the wireless card itself becomes the stronger suspect</h2>
+      </div>
+      <p>
+        Hardware becomes much more likely if the adapter disappears completely, returns only after shutdowns, or behaves the same on every network and after clean driver work. That is especially true on older laptops that have already had weak Wi-Fi for a while.
+      </p>
+    </section>
+
+    <section class="section text-section next-section">
+      <div class="section-heading">
+        <p class="eyebrow">Professional help</p>
+        <h2>When to seek professional help</h2>
+      </div>
+      <p>
+        Get help if Device Manager keeps losing the adapter, if the laptop cannot see any Wi-Fi even after safe driver work, or if the card shows repeated hardware errors. At that point you are beyond ordinary settings and restart fixes.
+      </p>
+    </section>
+
+    <section class="section related-section">
+      <div class="section-heading">
+        <p class="eyebrow">Related fixes</p>
+        <h2>Related Wi-Fi and network guides</h2>
+      </div>
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="windows-11-wifi-keeps-disconnecting.html">
+          <span class="tool-kicker">Helpful guide</span>
+          <span class="tool-label">Windows 11 Wi-Fi Keeps Disconnecting</span>
+          <span class="tool-description">Use this if networks appear normally but the connection will not stay stable.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="wifi-connected-but-no-internet.html">
+          <span class="tool-kicker">Helpful guide</span>
+          <span class="tool-label">Wi-Fi Connected But No Internet</span>
+          <span class="tool-description">Go here if Windows sees the network but internet traffic still fails.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="how-to-update-drivers-windows-11.html">
+          <span class="tool-kicker">Helpful guide</span>
+          <span class="tool-label">How To Update Drivers Windows 11</span>
+          <span class="tool-description">Use this if the adapter is present but clearly behaving like a driver problem.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Why does Windows say no Wi-Fi networks found?</summary>
+        <p>That usually points to a disabled Wi-Fi adapter, airplane mode, driver trouble, a stopped wireless service, or a hardware problem that keeps Windows from seeing nearby networks.</p>
+      </details>
+      <details>
+        <summary>Can airplane mode or a keyboard switch hide all Wi-Fi networks?</summary>
+        <p>Yes. Some laptops still use function keys or hardware toggles that disable wireless completely, which makes it look like no networks exist.</p>
+      </details>
+      <details>
+        <summary>Should I reinstall the Wi-Fi driver if no networks appear?</summary>
+        <p>If the adapter is present but not working correctly, driver reinstall or rollback can help. If the adapter is missing entirely, look at Device Manager first before making bigger changes.</p>
+      </details>
+      <details>
+        <summary>How do I know if the Wi-Fi card itself is failing?</summary>
+        <p>If the adapter keeps disappearing, fails on multiple networks, or behaves the same after normal software troubleshooting, hardware becomes much more likely.</p>
+      </details>
+      <details>
+        <summary>Can a Windows update cause no Wi-Fi networks found?</summary>
+        <p>Yes. Windows updates sometimes change wireless drivers or power settings in ways that leave the adapter disabled or unstable.</p>
+      </details>
+      <details>
+        <summary>When should I get professional help for missing Wi-Fi networks?</summary>
+        <p>Get help if the adapter vanishes repeatedly, Device Manager shows persistent errors, or the laptop still cannot see any networks after safe checks and driver troubleshooting.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Fix My Tech Tools. Simple tech troubleshooting tools.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
