@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSD Not Showing Up in Windows 11? What To Check First</title>
+  <meta name="description" content="Learn why an SSD may not show up in Windows 11 and what to check first in BIOS, Disk Management, File Explorer, and Device Manager before formatting anything.">
+  <link rel="canonical" href="https://www.fixmytechtools.com/ssd-not-showing-up-windows-11.html">
+  <meta property="og:title" content="SSD Not Showing Up in Windows 11? What To Check First">
+  <meta property="og:description" content="Learn why an SSD may not show up in Windows 11 and what to check first in BIOS, Disk Management, File Explorer, and Device Manager before formatting anything.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fixmytechtools.com/ssd-not-showing-up-windows-11.html">
+  <meta property="og:site_name" content="Fix My Tech Tools">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is my SSD not showing up in Windows 11?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An SSD may not appear because it is new and unallocated, missing a drive letter, marked offline, hidden by a storage controller issue, or not being detected properly by the system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I check first if a new SSD is not showing up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check whether the SSD appears in BIOS first, then look in Disk Management. A brand-new SSD often needs to be initialized and given a partition before it appears in File Explorer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to initialize an SSD in Disk Management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is usually safe only when you are sure the SSD is new and does not contain important data. If the drive may already hold files, stop before initializing or formatting because that can make recovery harder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a missing drive letter stop an SSD from showing up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A working SSD can appear in Disk Management but stay invisible in File Explorer until it has an assigned drive letter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SSD not showing up always mean the drive is bad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Sometimes the issue is only setup-related, such as a new disk needing initialization, a controller driver issue, or Windows seeing the drive as offline. But repeated disappearing, read errors, or strange noises from another drive involved can point to hardware trouble."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between BIOS detection and Windows detection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If BIOS sees the SSD but Windows does not, the problem is usually inside Windows, such as drivers, partitions, or drive letters. If BIOS does not see it either, the issue is more likely physical installation, compatibility, or hardware failure."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FT</span>
+        <span>Fix My Tech Tools</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="battery.html">Battery</a>
+        <a class="nav-link" href="slow-laptop.html">Slow Laptop</a>
+        <a class="nav-link" href="wifi-disconnecting.html">Wi-Fi</a>
+        <a class="nav-link" href="disk-cleanup.html">Cleanup</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">&gt;</span>
+        <span>SSD Not Showing Up in Windows 11</span>
+      </nav>
+
+      <p class="eyebrow">Storage detection guide</p>
+      <h1>SSD Not Showing Up in Windows 11?</h1>
+      <p>
+        If your SSD is missing from File Explorer, Disk Management, or even during setup, do not rush into formatting it. The right first move depends on whether the drive is brand new, recently moved from another PC, or suddenly disappeared from a system that was working before.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Quick answer</p>
+        <h2>Check where the SSD disappears</h2>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <h3>Quick answer</h3>
+          <p>If BIOS sees the SSD but Windows does not, focus on Disk Management, drive letters, and storage drivers. If BIOS does not see it either, think about installation, cable or slot issues, NVMe versus SATA compatibility, or possible hardware failure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">First distinction</p>
+        <h2>BIOS visibility versus Windows visibility</h2>
+      </div>
+      <p>
+        This is the most useful split. If the SSD appears in BIOS or UEFI storage information, the motherboard is at least seeing the device. That usually means the next checks belong inside Windows.
+      </p>
+      <p>
+        If the SSD does not appear in BIOS, Windows usually cannot fix that by itself. At that point, installation, slot compatibility, loose connection, or hardware failure become much more likely.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Explorer versus Disk Management</p>
+        <h2>Why File Explorer may stay blank even when the SSD exists</h2>
+      </div>
+      <p>
+        A lot of people look only in File Explorer and assume the SSD is dead. In reality, Windows can see a drive in Disk Management while File Explorer shows nothing because the disk is unallocated, offline, or missing a drive letter.
+      </p>
+      <ol class="step-list">
+        <li><strong>Open Disk Management.</strong> Right-click Start and open <strong>Disk Management</strong>.</li>
+        <li><strong>Look for the SSD by size.</strong> It may appear without a normal drive letter.</li>
+        <li><strong>Check its state.</strong> Look for labels such as <strong>Unallocated</strong>, <strong>Offline</strong>, or a partition without a letter.</li>
+      </ol>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">New drive setup</p>
+        <h2>A brand-new SSD often needs initialization before Windows shows it</h2>
+      </div>
+      <p>
+        If the SSD is new, it may simply have no partition yet. In Disk Management, that usually shows as unallocated space. In that case, initializing the disk and creating a volume is a normal setup step.
+      </p>
+      <p>
+        <strong>Important:</strong> only initialize or format the SSD if you are sure it is new or empty. If the drive might already contain files, stop there and avoid destructive actions until you know what is on it.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Simple Windows fixes</p>
+        <h2>Missing drive letter or offline disk</h2>
+      </div>
+      <p>
+        Sometimes the SSD is healthy and mounted, but Windows never assigned a letter such as <code>D:</code> or <code>E:</code>. That keeps it out of normal file browsing.
+      </p>
+      <ul class="step-list quick-benefit-list">
+        <li>If the partition exists but has no letter, assign one in Disk Management.</li>
+        <li>If the disk is marked <strong>Offline</strong>, bring it online first and then check again.</li>
+        <li>If Windows asks to format a drive you expected to contain files, stop and treat that as a data-risk warning.</li>
+      </ul>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Hardware type</p>
+        <h2>NVMe versus SATA can matter</h2>
+      </div>
+      <p>
+        Not every slot supports every type of SSD. A machine may have a slot that physically fits the drive but still does not support the protocol you are trying to use. That is why a SATA M.2 and an NVMe M.2 are easy to confuse in the real world.
+      </p>
+      <p>
+        If the SSD is newly installed and never appears anywhere, check the laptop or motherboard documentation before assuming the drive itself is bad.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Drivers</p>
+        <h2>Device Manager and storage controller checks</h2>
+      </div>
+      <p>
+        If BIOS sees the SSD but Windows acts inconsistent, open <strong>Device Manager</strong> and look for warning icons under <strong>Disk drives</strong> or <strong>Storage controllers</strong>. A controller or chipset issue can block proper detection even when the physical SSD is installed correctly.
+      </p>
+      <p>
+        If Windows has been unstable after updates or hardware changes, the <a href="how-to-update-drivers-windows-11.html">How To Update Drivers Windows 11 guide</a> can help you work through the safest update path.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Data safety</p>
+        <h2>When to pause before initialize or format</h2>
+      </div>
+      <p>
+        This is where people accidentally make recovery harder. If the SSD used to hold files, or if you removed it from another PC, do not initialize, format, or create a new volume just because Windows offers to.
+      </p>
+      <ul class="step-list quick-benefit-list">
+        <li>Pause if the drive may contain important documents, photos, or work files.</li>
+        <li>Pause if Windows shows the disk as RAW and the data matters.</li>
+        <li>Pause if the drive appears and disappears unpredictably.</li>
+      </ul>
+    </section>
+
+    <section class="section text-section next-section">
+      <div class="section-heading">
+        <p class="eyebrow">Failure signs</p>
+        <h2>Signs the SSD may actually be failing</h2>
+      </div>
+      <p>
+        An SSD that never appears from day one may be a setup issue. An SSD that used to work and now vanishes, throws read errors, causes boot problems, or disconnects during file copies is more concerning. If the laptop also struggles to boot, the <a href="windows-11-wont-boot.html">Windows 11 Won't Boot guide</a> may help with the next checks.
+      </p>
+      <p>
+        If the SSD is present but the machine feels very sluggish, use the <a href="ssd-slow-windows-11.html">SSD Slow in Windows 11 guide</a> next. If the drive is simply crowded, the better fit is <a href="windows-11-c-drive-full.html">C Drive Full in Windows 11</a>.
+      </p>
+    </section>
+
+    <section class="section related-section">
+      <div class="section-heading">
+        <p class="eyebrow">Related fixes</p>
+        <h2>Related storage and performance guides</h2>
+      </div>
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="windows-11-c-drive-full.html">
+          <span class="tool-kicker">Storage guide</span>
+          <span class="tool-label">C Drive Full in Windows 11</span>
+          <span class="tool-description">Use this when the SSD appears normally but free space is running low.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="external-hard-drive-not-showing-up-windows.html">
+          <span class="tool-kicker">Storage guide</span>
+          <span class="tool-label">External Hard Drive Not Showing Up in Windows</span>
+          <span class="tool-description">Follow the external-drive version if the missing device connects over USB.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="ssd-slow-windows-11.html">
+          <span class="tool-kicker">Storage guide</span>
+          <span class="tool-label">SSD Slow in Windows 11</span>
+          <span class="tool-description">Check SSD performance, free space, and background disk pressure before replacing the drive.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>SSD not showing up FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>Why is my SSD not showing up in Windows 11?</h3>
+          <p>An SSD may be missing because it is new and unallocated, missing a drive letter, marked offline, or affected by a storage controller problem. The first useful check is whether BIOS can see it.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What should I check first if a new SSD is not showing up?</h3>
+          <p>Start by checking BIOS and then Disk Management. A new SSD often does not appear in File Explorer until Windows has initialized it and created a usable partition.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is it safe to initialize an SSD in Disk Management?</h3>
+          <p>Yes, but only if you are sure the drive is new or empty. If the SSD may already contain data, initializing or formatting it too early can create a recovery headache.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can a missing drive letter stop an SSD from showing up?</h3>
+          <p>Yes. The SSD can be visible in Disk Management but still absent in File Explorer until a letter is assigned to the partition.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Does SSD not showing up always mean the drive is bad?</h3>
+          <p>No. It can be a simple setup problem, especially with a new install. Repeated disappearance or errors are more concerning than a brand-new unallocated drive.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What is the difference between BIOS detection and Windows detection?</h3>
+          <p>If BIOS sees the SSD, the hardware connection is more likely okay and the issue may be inside Windows. If BIOS does not see it either, look harder at installation, slot compatibility, or hardware failure.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Fix My Tech Tools. Simple tech troubleshooting tools.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
