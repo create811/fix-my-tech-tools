@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HDMI No Sound in Windows 11? How To Fix Audio Output</title>
+  <meta name="description" content="Fix HDMI no sound in Windows 11 by checking the correct output device, monitor speakers, graphics audio driver, cables, ports, docks, and adapter issues.">
+  <link rel="canonical" href="https://www.fixmytechtools.com/hdmi-no-sound-windows-11.html">
+  <meta property="og:title" content="HDMI No Sound in Windows 11? How To Fix Audio Output">
+  <meta property="og:description" content="Fix HDMI no sound in Windows 11 by checking the correct output device, monitor speakers, graphics audio driver, cables, ports, docks, and adapter issues.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fixmytechtools.com/hdmi-no-sound-windows-11.html">
+  <meta property="og:site_name" content="Fix My Tech Tools">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do I get picture over HDMI but no sound in Windows 11?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This usually happens because Windows is using the wrong output device, the TV or monitor volume is off, the display has no built-in speakers, the graphics audio device is disabled, or the HDMI path through a dock or adapter is not passing audio correctly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do all monitors support sound over HDMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Some monitors accept HDMI video but have no built-in speakers or audio output path, so Windows can send audio there even though nothing will actually play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a graphics driver affect HDMI sound?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HDMI and DisplayPort audio usually ride through the graphics device, so a GPU or graphics-audio driver issue can stop sound even while video still works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do docks and HDMI adapters cause audio problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Docks, USB-C hubs, and adapters add another link in the chain and can affect whether audio is passed through correctly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does display mode matter for HDMI audio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes. Duplicate and extend modes can affect which display Windows treats as the active audio endpoint, especially when several screens are attached."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is HDMI no sound more likely a hardware problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hardware is more likely when several cables and ports fail the same way, the TV or monitor audio works with other devices but never with this PC, or docks and adapters behave inconsistently."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FT</span>
+        <span>Fix My Tech Tools</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="battery.html">Battery</a>
+        <a class="nav-link" href="slow-laptop.html">Slow Laptop</a>
+        <a class="nav-link" href="wifi-disconnecting.html">Wi-Fi</a>
+        <a class="nav-link" href="disk-cleanup.html">Cleanup</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">&gt;</span>
+        <span>HDMI No Sound in Windows 11</span>
+      </nav>
+
+      <p class="eyebrow">Windows audio troubleshooting</p>
+      <h1>HDMI No Sound in Windows 11? How To Fix Audio Output</h1>
+      <p>
+        HDMI audio problems can be confusing because the video side often works perfectly. If the picture is on the TV or monitor but the sound is missing, that usually means the display path is good enough for video while the audio endpoint, speaker setup, driver, or adapter path still is not right.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Quick answer</p>
+        <h2>Check whether Windows is sending audio to the correct display device</h2>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <h3>Quick answer</h3>
+          <p>If HDMI video works but there is no sound in Windows 11, first select the HDMI display as the output device, confirm the TV or monitor actually has speakers, and check its volume before blaming the cable or driver.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Safe order</p>
+        <h2>Best troubleshooting order for HDMI audio problems</h2>
+      </div>
+      <ol class="step-list">
+        <li><strong>Select the correct output device in Windows.</strong> HDMI audio may not switch automatically.</li>
+        <li><strong>Check the TV or monitor volume.</strong> Also confirm it is not muted internally.</li>
+        <li><strong>Confirm the display actually has speakers or an audio path.</strong> Some monitors accept HDMI without playing sound.</li>
+        <li><strong>Reconnect the HDMI cable and restart the display if needed.</strong></li>
+        <li><strong>Try another HDMI port or cable.</strong></li>
+        <li><strong>Check Device Manager and the graphics audio device.</strong></li>
+        <li><strong>Update the GPU and HDMI audio driver path if sound broke after changes.</strong></li>
+        <li><strong>Test around docks, USB-C hubs, or adapters.</strong> These often change the behavior.</li>
+      </ol>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Monitor reality check</p>
+        <h2>Some monitors take HDMI video but still cannot play audio</h2>
+      </div>
+      <p>
+        This catches people all the time. Windows may happily show the monitor as an HDMI audio device even if the monitor has no built-in speakers, no headphone output, or speakers that were disabled in the monitor menu. If you are using a desktop monitor instead of a TV, check the model specs before spending an hour on drivers.
+      </p>
+      <p>
+        If the broader issue is that Windows has no sound through any path, step back to <a href="no-sound-windows-11.html">No Sound in Windows 11</a>. This page is specifically for the case where the video already works through HDMI.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Graphics audio path</p>
+        <h2>HDMI audio often depends on the graphics device, not the regular speaker driver</h2>
+      </div>
+      <p>
+        HDMI and DisplayPort audio usually travel through the graphics hardware. That means NVIDIA, AMD, Intel graphics, or dock-related audio components may be involved even though you are troubleshooting sound. If Device Manager shows the display audio device missing or warning-marked, the graphics-side driver matters more than the usual laptop speaker driver.
+      </p>
+      <p>
+        Use <a href="how-to-update-graphics-driver-windows-11.html">How To Update Graphics Driver Windows 11</a> or the broader <a href="how-to-update-drivers-windows-11.html">How To Update Drivers Windows 11</a> guide if the issue started after an update or docking change.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Adapters and docks</p>
+        <h2>Docks, USB-C hubs, and adapters complicate HDMI audio</h2>
+      </div>
+      <p>
+        An HDMI cable by itself is one thing. A laptop running through USB-C, Thunderbolt, a dock, or a small HDMI adapter adds more variables. Some adapters handle video reliably while audio pass-through is inconsistent. If sound returns when you connect directly instead of through the dock, that tells you where the real fault probably lives.
+      </p>
+      <p>
+        If a dock or adapter also causes USB devices to misbehave, the issue may be broader than HDMI audio alone.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Display mode</p>
+        <h2>Duplicate and extend mode can affect which audio endpoint stays active</h2>
+      </div>
+      <p>
+        Display mode is not usually the first thing to blame, but it can matter when several monitors are attached. In duplicate mode, Windows may behave differently about the active audio endpoint than it does in extend mode. If the sound device list keeps shifting as displays wake and sleep, test with only one external display connected.
+      </p>
+    </section>
+
+    <section class="section text-section next-section">
+      <div class="section-heading">
+        <p class="eyebrow">Hardware signs</p>
+        <h2>When HDMI audio trouble is more likely physical</h2>
+      </div>
+      <ul class="step-list quick-benefit-list">
+        <li>Multiple HDMI cables and ports all fail with the same PC but work with another device</li>
+        <li>The dock or adapter gets unusually hot or behaves inconsistently</li>
+        <li>The TV or monitor audio works from another source device but never from this computer</li>
+        <li>The HDMI connector is visibly loose, damaged, or intermittent</li>
+        <li>Sound returns only when the cable is held at a certain angle</li>
+      </ul>
+    </section>
+
+    <section class="section related-section">
+      <div class="section-heading">
+        <p class="eyebrow">Related fixes</p>
+        <h2>Related audio and display guides</h2>
+      </div>
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="no-sound-windows-11.html">
+          <span class="tool-kicker">Audio guide</span>
+          <span class="tool-label">No Sound in Windows 11</span>
+          <span class="tool-description">Use the broader guide if audio is missing from more than just the HDMI path.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="how-to-update-graphics-driver-windows-11.html">
+          <span class="tool-kicker">Driver guide</span>
+          <span class="tool-label">How To Update Graphics Driver Windows 11</span>
+          <span class="tool-description">Useful when the HDMI display audio path broke after a graphics change.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="how-to-update-drivers-windows-11.html">
+          <span class="tool-kicker">Windows guide</span>
+          <span class="tool-label">How To Update Drivers Windows 11</span>
+          <span class="tool-description">Follow the safe driver-update order without using risky updater tools.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Why do I get picture over HDMI but no sound in Windows 11?</summary>
+        <p>This usually happens because Windows is using the wrong output device, the TV or monitor volume is off, the display has no built-in speakers, the graphics audio device is disabled, or the HDMI path through a dock or adapter is not passing audio correctly.</p>
+      </details>
+      <details>
+        <summary>Do all monitors support sound over HDMI?</summary>
+        <p>No. Some monitors accept HDMI video but have no built-in speakers or audio output path, so Windows can send audio there even though nothing will actually play.</p>
+      </details>
+      <details>
+        <summary>Can a graphics driver affect HDMI sound?</summary>
+        <p>Yes. HDMI and DisplayPort audio usually ride through the graphics device, so a GPU or graphics-audio driver issue can stop sound even while video still works.</p>
+      </details>
+      <details>
+        <summary>Do docks and HDMI adapters cause audio problems?</summary>
+        <p>Yes. Docks, USB-C hubs, and adapters add another link in the chain and can affect whether audio is passed through correctly.</p>
+      </details>
+      <details>
+        <summary>Does display mode matter for HDMI audio?</summary>
+        <p>Sometimes. Duplicate and extend modes can affect which display Windows treats as the active audio endpoint, especially when several screens are attached.</p>
+      </details>
+      <details>
+        <summary>When is HDMI no sound more likely a hardware problem?</summary>
+        <p>Hardware is more likely when several cables and ports fail the same way, the TV or monitor audio works with other devices but never with this PC, or docks and adapters behave inconsistently.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Fix My Tech Tools. Simple tech troubleshooting tools.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

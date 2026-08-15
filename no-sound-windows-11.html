@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Sound in Windows 11? What To Check First</title>
+  <meta name="description" content="Fix no sound in Windows 11 by checking volume, output device, Volume Mixer, enhancements, drivers, Windows Update, and hardware warning signs in a safe order.">
+  <link rel="canonical" href="https://www.fixmytechtools.com/no-sound-windows-11.html">
+  <meta property="og:title" content="No Sound in Windows 11? What To Check First">
+  <meta property="og:description" content="Fix no sound in Windows 11 by checking volume, output device, Volume Mixer, enhancements, drivers, Windows Update, and hardware warning signs in a safe order.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fixmytechtools.com/no-sound-windows-11.html">
+  <meta property="og:site_name" content="Fix My Tech Tools">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is there no sound at all in Windows 11?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No sound in Windows 11 usually comes from the wrong output device, muted volume, app-specific mixer settings, audio driver trouble, disabled enhancements, or a speaker or headphone hardware issue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I tell whether the problem is Windows or the speakers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Test another output path such as headphones, the laptop speakers, or an external speaker. If one works and another does not, the problem is often the device or connection rather than all of Windows audio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Volume Mixer mute only one app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Windows 11 can mute or lower one app while system sounds still play normally, which is why checking Volume Mixer matters when only one program seems silent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I update the audio driver from the laptop manufacturer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, especially on laptops with Realtek or vendor-tuned audio packages. The manufacturer driver can matter more than a generic driver if sound vanished after an update."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I check the Windows Audio service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the Windows Audio service only after basic output-device, mixer, and driver checks. It is not usually the first cause when just one app or one device has no sound."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is no sound more likely to be a hardware problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hardware becomes more likely when speakers crackle, the headphone jack feels loose, external speakers fail with known-good cables, or every output path stays silent even after software checks."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FT</span>
+        <span>Fix My Tech Tools</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="battery.html">Battery</a>
+        <a class="nav-link" href="slow-laptop.html">Slow Laptop</a>
+        <a class="nav-link" href="wifi-disconnecting.html">Wi-Fi</a>
+        <a class="nav-link" href="disk-cleanup.html">Cleanup</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">&gt;</span>
+        <span>No Sound in Windows 11</span>
+      </nav>
+
+      <p class="eyebrow">Windows audio troubleshooting</p>
+      <h1>No Sound in Windows 11? What To Check First</h1>
+      <p>
+        When Windows 11 suddenly has no sound, the cause is often smaller than people fear. The audio may still be working, but the wrong output device is selected, one app is muted in Volume Mixer, or Windows switched from speakers to a monitor, dock, or headset without making that obvious.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Quick answer</p>
+        <h2>Check the selected output and the mixer before assuming the driver is broken</h2>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <h3>Quick answer</h3>
+          <p>If Windows 11 has no sound, first check mute, output device selection, speaker or headphone connection, and per-app Volume Mixer settings before moving into drivers, Device Manager, or services.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Safe order</p>
+        <h2>Best troubleshooting order when Windows 11 has no audio</h2>
+      </div>
+      <ol class="step-list">
+        <li><strong>Check mute and volume first.</strong> Also check your keyboard mute key if your laptop has one.</li>
+        <li><strong>Confirm the correct output device.</strong> Windows may be sending sound to a monitor, dock, headset, or Bluetooth device you are not using.</li>
+        <li><strong>Test speakers versus headphones.</strong> This tells you whether the issue affects all sound or only one output path.</li>
+        <li><strong>Open Volume Mixer.</strong> A single app may be muted while the rest of Windows audio is fine.</li>
+        <li><strong>Review Windows sound settings and enhancements.</strong> Enhancements and spatial audio settings can occasionally confuse the output path.</li>
+        <li><strong>Run the Windows audio troubleshooter if it is available in your current Settings menu.</strong></li>
+        <li><strong>Check Device Manager and the audio driver.</strong> This matters most if sound disappeared after an update or restart.</li>
+        <li><strong>Check Windows Update and the laptop maker's audio driver.</strong> Manufacturer packages matter on many Realtek-based laptops.</li>
+      </ol>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Symptom guide</p>
+        <h2>What the no-sound symptom usually means</h2>
+      </div>
+      <p>
+        If <strong>system sounds work but Spotify, YouTube, or a game is silent</strong>, the problem is often app-specific output or Volume Mixer. If <strong>headphones work but the laptop speakers do not</strong>, you are more likely looking at speaker settings, jack-detection behavior, or internal speaker hardware. If <strong>everything went silent right after Windows Update</strong>, the audio driver becomes a much stronger suspect.
+      </p>
+      <p>
+        This is also where overlap matters. If your specific issue is that Windows sees Bluetooth normally but audio still comes from somewhere else, use <a href="bluetooth-headphones-connected-no-sound.html">Bluetooth Headphones Connected but No Sound</a>. If HDMI video works but the TV or monitor has no audio, use <a href="hdmi-no-sound-windows-11.html">HDMI No Sound in Windows 11</a>.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Output device</p>
+        <h2>The output device is often the real problem</h2>
+      </div>
+      <p>
+        Windows 11 can keep several outputs ready at once: internal speakers, wired headphones, USB headsets, Bluetooth headphones, monitors, docks, and TVs. After updates, docking changes, or reconnecting old devices, Windows may keep sending sound to the wrong one without showing a dramatic error.
+      </p>
+      <p>
+        Open the sound output list and deliberately switch between the internal speakers and any connected devices. If you recently connected a display, monitor audio is a very common reason the laptop seems silent even though the volume icon looks normal.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">App-specific audio</p>
+        <h2>Volume Mixer explains many real-world "no sound" cases</h2>
+      </div>
+      <p>
+        Volume Mixer matters because Windows can lower or mute one app while everything else still works. Browsers, meeting apps, games, and music apps often keep their own output choice too. If the microphone works in one program but not another, the same idea applies on the input side, which is covered in <a href="microphone-not-working-windows-11.html">Microphone Not Working in Windows 11</a>.
+      </p>
+      <p>
+        If only a headset is behaving strangely, especially a wired or USB one, the more focused <a href="headphones-not-detected-windows-11.html">Headphones Not Detected in Windows 11</a> guide is the better next stop.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Drivers and updates</p>
+        <h2>When Device Manager and drivers become the right next step</h2>
+      </div>
+      <p>
+        If Windows does not show the expected audio device, shows a warning icon, or lost sound right after an update, check Device Manager next. Refresh the driver through Windows Update first, then compare it with the laptop maker's support page. Many brands package custom Realtek or vendor audio software that handles jack detection and speaker tuning differently from the generic Microsoft path.
+      </p>
+      <p>
+        If you want the safest driver-update order, use <a href="how-to-update-drivers-windows-11.html">How To Update Drivers Windows 11</a> instead of installing random updater utilities.
+      </p>
+    </section>
+
+    <section class="section text-section">
+      <div class="section-heading">
+        <p class="eyebrow">Services and troubleshooting tools</p>
+        <h2>Use the troubleshooter and Windows Audio service only when the basics do not explain it</h2>
+      </div>
+      <p>
+        The built-in audio troubleshooter is worth a try when the cause is not obvious. It can sometimes spot muted devices, disabled outputs, or service problems. The Windows Audio service matters more if all sound is missing across every app and device, not when one application or one output is the only thing failing.
+      </p>
+      <p>
+        If Windows itself has been unstable in several different ways, the audio problem may be part of something broader. In that case, the <a href="repair-corrupted-system-files-windows.html">Repair Corrupted System Files in Windows guide</a> can help after the device-specific checks are done.
+      </p>
+    </section>
+
+    <section class="section text-section next-section">
+      <div class="section-heading">
+        <p class="eyebrow">Hardware warning</p>
+        <h2>When sound problems are more likely physical</h2>
+      </div>
+      <ul class="step-list quick-benefit-list">
+        <li>External speakers fail with multiple known-good cables and devices</li>
+        <li>The headphone jack feels loose or only works when the plug is held at an angle</li>
+        <li>Internal speakers crackle badly or cut in and out after a drop or liquid exposure</li>
+        <li>USB audio devices disconnect randomly like a broader USB problem</li>
+        <li>Every output path stays silent even after careful settings and driver checks</li>
+      </ul>
+      <p>
+        If a USB headset or speaker disconnects or vanishes unpredictably, the connection itself may be part of the problem. That is where <a href="usb-device-not-recognized-windows.html">USB Device Not Recognized in Windows</a> becomes relevant.
+      </p>
+    </section>
+
+    <section class="section related-section">
+      <div class="section-heading">
+        <p class="eyebrow">Related fixes</p>
+        <h2>Related audio and Windows guides</h2>
+      </div>
+      <div class="tool-grid tool-grid-three">
+        <a class="tool-card tool-card-featured" href="headphones-not-detected-windows-11.html">
+          <span class="tool-kicker">Audio guide</span>
+          <span class="tool-label">Headphones Not Detected in Windows 11</span>
+          <span class="tool-description">Use this when the problem is specifically a wired or USB headset not showing up.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="hdmi-no-sound-windows-11.html">
+          <span class="tool-kicker">Audio guide</span>
+          <span class="tool-label">HDMI No Sound in Windows 11</span>
+          <span class="tool-description">Go here if the display works over HDMI but audio does not.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+        <a class="tool-card tool-card-featured" href="how-to-update-drivers-windows-11.html">
+          <span class="tool-kicker">Windows guide</span>
+          <span class="tool-label">How To Update Drivers Windows 11</span>
+          <span class="tool-description">Follow the safe driver update order if sound broke after an update.</span>
+          <span class="tool-action">Open guide</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Why is there no sound at all in Windows 11?</summary>
+        <p>No sound in Windows 11 usually comes from the wrong output device, muted volume, app-specific mixer settings, audio driver trouble, disabled enhancements, or a speaker or headphone hardware issue.</p>
+      </details>
+      <details>
+        <summary>How do I tell whether the problem is Windows or the speakers?</summary>
+        <p>Test another output path such as headphones, the laptop speakers, or an external speaker. If one works and another does not, the problem is often the device or connection rather than all of Windows audio.</p>
+      </details>
+      <details>
+        <summary>Can Volume Mixer mute only one app?</summary>
+        <p>Yes. Windows 11 can mute or lower one app while system sounds still play normally, which is why checking Volume Mixer matters when only one program seems silent.</p>
+      </details>
+      <details>
+        <summary>Should I update the audio driver from the laptop manufacturer?</summary>
+        <p>Yes, especially on laptops with Realtek or vendor-tuned audio packages. The manufacturer driver can matter more than a generic driver if sound vanished after an update.</p>
+      </details>
+      <details>
+        <summary>When should I check the Windows Audio service?</summary>
+        <p>Check the Windows Audio service only after basic output-device, mixer, and driver checks. It is not usually the first cause when just one app or one device has no sound.</p>
+      </details>
+      <details>
+        <summary>When is no sound more likely to be a hardware problem?</summary>
+        <p>Hardware becomes more likely when speakers crackle, the headphone jack feels loose, external speakers fail with known-good cables, or every output path stays silent even after software checks.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Fix My Tech Tools. Simple tech troubleshooting tools.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
